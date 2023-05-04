@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.page-title{
+    margin: 40px 0;
+    font-size: 32px;
+}
+
+
+.card-image{
+    position: relative;
+    width: 100%;
+}
+
+.card-image > button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #fff;
+    color: #BE0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    font-size: 22px;
+}
+
+
+.modal-dialog{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+
+.modal-dialog::after{
+content: "";
+position: absolute;
+top: -15px;
+right: 15px;
+width: 0;
+height: 0;
+border-bottom: 20px solid #fff;
+border-right: 20px solid transparent;
+border-left: 20px solid transparent
+}
+
+.modal-body{
+    max-height: 400px;
+    overflow: auto;
+}
+
+.modal-favorites{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.modal-img{
+    width: 200px;
+}
+
+.modal-img > img{
+    object-fit: contain;
+    aspect-ratio: 3/2;
+    max-width: 150px;
+    height: 100px;
+}
+
+
+.modal-info{
+    width: 100%;
+    position: relative;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.modal-info > i{
+    position: absolute;
+    right: 0; 
+    top: 0;
+    cursor: pointer;
+    padding: 0 20px;
+    color: #950101;
+}
+
+
+.image-empty{
+    width: 100%;
+}
+
+.badge{
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .page-title{
+        font-size: 26px;
+    }
+
+    .modal-dialog{
+        top: 0;
+        right: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .modal-dialog::after{
+        display: none;
+    }
+
+    .modal-body{
+        max-height: none;
+    }
+
+    .modal-favorites{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modal-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-img > img{
+        height: 100%;
+        max-width: 210px;
+    }
+
+    .modal-info{
+        position: static;
+    }
+
+    .modal-info > i {
+        top: 20px;
+    }
+
+    .image-empty{
+        width: 50%;
+        margin: auto;
+    }
+}
